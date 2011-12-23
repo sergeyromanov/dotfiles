@@ -25,3 +25,11 @@ au InsertLeave * match ExtraWhitespace /\s\+$\| \+\ze\t/
 set incsearch ignorecase hlsearch
 " Press space to clear search highlighting and any message already displayed.
 nnoremap <silent> <Space> :silent noh<Bar>echo<CR>
+
+set wildmenu
+set wcm=<Tab>
+menu Encoding.koi8-r :e ++enc=koi8-r ++ff=unix<CR>
+menu Encoding.windows-1251 :e ++enc=cp1251 ++ff=dos<CR>
+menu Encoding.cp866 :e ++enc=cp866 ++ff=dos<CR>
+menu Encoding.utf-8 :e ++enc=utf8<CR>
+map <F8> :emenu Encoding.<TAB>
