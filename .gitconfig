@@ -1,3 +1,8 @@
+[core]
+    pager  = less -r
+    editor = vim
+[url "ssh://git@github.com/"]
+    insteadOf = "gh:"
 [user]
-	name = Sergey Romanov
-	email = complefor@rambler.ru
+    name = Sergey Romanov
+    email = complefor@rambler.ru
