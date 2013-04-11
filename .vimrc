@@ -22,7 +22,10 @@ match ExtraWhitespace /\s\+$\| \+\ze\t/
 au InsertEnter * match ExtraWhitespace /\s\+\%#\@<!$\| \+\ze\t/
 au InsertLeave * match ExtraWhitespace /\s\+$\| \+\ze\t/
 
-set incsearch ignorecase hlsearch
+set incsearch
+set ignorecase
+set hlsearch
+set smartcase
 " Press space to clear search highlighting and any message already displayed.
 nnoremap <silent> <Space> :silent noh<Bar>echo<CR>
 
@@ -33,3 +36,6 @@ menu Encoding.windows-1251 :e ++enc=cp1251 ++ff=dos<CR>
 menu Encoding.cp866 :e ++enc=cp866 ++ff=dos<CR>
 menu Encoding.utf-8 :e ++enc=utf8<CR>
 map <F8> :emenu Encoding.<TAB>
+
+nmap j gj
+nmap k gk
