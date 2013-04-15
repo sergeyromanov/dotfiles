@@ -44,3 +44,5 @@ map <F8> :emenu Encoding.<TAB>
 
 nmap j gj
 nmap k gk
+
+iab psh! #!/usr/bin/env perl
